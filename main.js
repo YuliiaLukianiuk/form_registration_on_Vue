@@ -15,7 +15,7 @@ var app = new Vue({
     checkForm: function (e) {
       this.errors = [];
 
-      if (!this.email & !this.password) {
+      if (!this.email) {
         this.errors.push("");
       } else if (!this.validEmail(this.email)) {
         this.errors.push('Invalid Username');
@@ -31,3 +31,16 @@ var app = new Vue({
     }
   }
 });
+
+
+var lengthPassword = document.querySelector('.field-password');
+lengthPassword.onkeyup = function() {
+  if (lengthPassword.value.length < 6 ){
+    lengthPassword.classList.add("invalid");
+  }else{
+    lengthPassword.classList.remove("invalid");
+    lengthPassword.classList.add("valid");
+
+  }
+  };
+

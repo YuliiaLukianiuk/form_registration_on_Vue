@@ -100,7 +100,12 @@ form {
   bottom: 30px;
   left: 300px;
 }
-.field-email:valid,
-.field-password:valid {
+.field-email:valid {
+  border: 1px solid green;
+}
+.invalid {
+  border: 1px solid red;
+}
+.valid {
   border: 1px solid green;
 }
